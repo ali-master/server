@@ -41,6 +41,12 @@ export const useOrganizationMenuItems = (): OrganizationMenuItem[] => {
       }),
       nameTranslationKey: 'organization_menu_invitations',
     },
+    {
+      link: LINKS.ORGANIZATION_BILLING.build({
+        [PARAMS.ORGANIZATION_SLUG]: organization!.slug,
+      }),
+      nameTranslationKey: 'organization_menu_billing',
+    },
   ].map(
     (i) =>
       new OrganizationMenuItem(

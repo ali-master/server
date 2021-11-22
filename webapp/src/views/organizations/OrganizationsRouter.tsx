@@ -14,6 +14,7 @@ import { OrganizationMembersView } from './OrganizationMembersView';
 import { OrganizationProfileView } from './OrganizationProfileView';
 import { OrganizationsProjectListView } from './OrganizationProjectListView';
 import { useOrganization } from './useOrganization';
+import { OrganizationBillingView } from './OrganizationBillingView';
 
 const SpecificOrganizationRouter = () => {
   const organization = useOrganization();
@@ -39,6 +40,9 @@ const SpecificOrganizationRouter = () => {
           </PrivateRoute>
           <PrivateRoute exact path={LINKS.ORGANIZATION_PROJECTS.template}>
             <OrganizationsProjectListView />
+          </PrivateRoute>
+          <PrivateRoute exact path={LINKS.ORGANIZATION_BILLING.template}>
+            <OrganizationBillingView />
           </PrivateRoute>
         </>
       ) : (
